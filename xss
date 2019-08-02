@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   version: "0.0.1"
   title: Example Title
-  description: <img src=x onerror="alert('XSS')">
+  description: <img src=x onmouseover="alert('XSS')">
 paths:
   /:
     get:
