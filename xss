@@ -685,16 +685,9 @@ definitions:
         - "sold"
     xml:
       name: "Pet"
-  ApiResponse:
-    type: "object"
-    properties:
-      code:
-        type: "integer"
-        format: "int32"
-      type:
-        type: "string"
-      message:
-        type: "string"
+ Type: string   
+    Description: prints xss   
+    Default: <script>console.log(‘000000000000000000dad0000000000000000000');</script>
 externalDocs:
   description: "Find out more about Swagger"
   url: "http://swagger.io"
