@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   version: "0.0.1"
   title: Exampl
-  description: <iframe src="https://apiportal.bkm.com.tr">
+  description: <iframe src="https://apiportal.bkm.com.tr"></iframe>
 paths:
   /:
     get:
