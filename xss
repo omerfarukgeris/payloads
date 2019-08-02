@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
   version: "0.0.1"
-  title: Example Title
+  title: Exampl
   description: <img src="/assets/img/bkm-logo.png" onmouseover="alert('XSS')">
 paths:
   /:
