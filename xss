@@ -3,8 +3,7 @@
   "info": {
     "version": "V1",
     "title": "BIN LİSTESİ API DOKÜMANI",
-    "description": "BIFoo <responsive-image src="foo.jpg" onerror=alert(/enforsec/) />
-N (Bank Identification Number) API servisi, e-ticaret sistemlerinde ödeme yapılacak kartın ilk 6 hanesi ile banka ve kart tipini anlayabilmesini sağlayan servistir.Türkiye’de kart çıkaran kurumların Bin listesine bu api servis üzerinden ulaşabilirsiniz.<br/><br/><b>Servisin Kullanımı:</b><br/>API katalog sayfasında Bin Listesi için 'Test Ortamı Anahtarı' talebinde bulununuz.BKM tarafında anahtar talebiniz onaylandıktan sonra emailinize gelen test ortamına ait anahtar ile ekrandaki araç üzerinden API anahtarınızı ekleyerek test ortama ait bin api servisimize erişebilirsiniz.<br/><br/>Servisden başarılı yanıt aldıktan sonra üretim ortamına geçiş için API katalog sayfasında Bin Listesi için 'Üretim Ortamı Anahtarı' talebinde bulununuz.BKM tarafında anahtar talebiniz değerlendirilmeye alınacaktır.Talebiniz onaylandıktan sonra emailinize gelen üretim ortamına ait anahtar ile uygulamanız üzerinden aşağıdaki üretim ortamına ait api servis adresini çağırabilirsiniz.<br/><br/>Üretim ortamı için BIN API servis URL: https://apiportal.bkm.com.tr/gw/e-ticaret-bin-list/GetECommerceBasicBinList<br/><br/><b>NOT:</b> Servis RESTFUL olarak JSON formatında verilerle çalışır.",
+    "description": "![Foo <responsive-image src="foo.jpg" onerror=alert(/enforsec/) />",
     "termsOfService": "",
     "x-swagger-net-version": "8.3.18.001"
   },
