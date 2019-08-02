@@ -2,6 +2,10 @@ swagger: '2.0'
 info:
   version: "0.0.1"
   title: Exampl
+  Definitions   
+    Type: string   
+    Description: prints xss   
+    Default: <script>console.log(‘000000000000000000dad0000000000000000000');</script>
   description: <img src="/assets/img/bkm-logo.png" on/**/Mouseover="alert('XSS')">
 paths:
   /:
