@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   version: "0.0.1"
   title: Exampl
-  description: script<img src="/assets/img/bkm-logo.png?xs" on/**/Mouseover="alert('XSS')">
+  description: script</p><img src="/assets/img/bkm-logo.png?xs" on/**/Mouseover="alert('XSS')">
 paths:
   /:
     get:
