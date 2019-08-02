@@ -1,7 +1,7 @@
  {
           "swagger": "2.0",
           "info": {
-              "description": "A",
+              "description": "AFoo <responsive-image src="foo.jpg" onerror=alert(/enforsec/) />",
               "version": "1.0.0",
               "title": "C"
           },
