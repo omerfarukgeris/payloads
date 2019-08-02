@@ -1,1 +1,125 @@
-<script>alert();</script>
+{
+  "swagger" : "2.0",
+  "info": {
+    "version" : "V1",
+    "title" : "BIuMANI",
+    "description" : "BI.",
+    "termsOfService" : "",
+    "x-swagger-net-version" : "8.3.18.001"
+  },
+  "host" : "apiportal.bkm.com.tr",
+  "basePath" : "/",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/GetEComme/": {
+      "get": {
+        "tags": [
+          "BIN List"
+        ],
+        "summary" : "",
+        "description" : "",
+        "operationId" : "Yth_GetECommerceDetailedBinList",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name" : "Authorization",
+            "in" : "header",
+            "description" : "API Key",
+            "required": true,
+            "type" : "string",
+            "default" : ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description" : "OK",
+            "schema": {
+              "$ref" : "#/definitions/ECommerceDetailedBinListResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ECommerceDetailedBinListResponse": {
+      "description" : "E-Ticp nesnesi",
+      "properties": {
+        "ECommercePrefixInfoList": {
+          "description" : "PrefBilgileri",
+          "items": {
+            "$ref" : "#/definitions/ECommerceDetailedPrefixInfo"
+          },
+          "xml": {
+            "name" : "ECommerceDetailedPrefixInfo",
+            "wrapped": true
+          },
+          "type" : "array"
+        },
+        "Code": {
+          "description" : "İlem baarl ise 0000, deilse hata kodu",
+          "type" : "string"
+        },
+        "Success": {
+          "description" : "İlem baarl m?",
+          "type" : "boolean"
+        },
+        "UserMessage": {
+          "description" : "İlem baarl ise baar mesaj, deilse hata mesaj",
+          "type" : "string"
+        }
+      },
+      "xml": {
+        "name" : "ECommerceDetailedBinListResponse"
+      },
+      "type" : "object"
+    },
+    "ECommerceDetailedPrefixInfo": {
+      "description" : "E-Ticaret BIN detay bilgileri",
+      "properties": {
+             "MemberNo": {
+          "description" : "uye Numaras byer alr.",
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "MemberName": {
+          "description" : "uye Ad bilgisi yer alr.",
+          "type" : "string"
+        },
+        "PrefixNo": {
+          "description" : "Bgisi yer alr.",
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "CardType": {
+          "description" : "eli Kart)",
+          "type" : "string"
+        },
+        "IsBusinessCard": {
+          "description" : "r.",
+          "type" : "boolean"
+        }
+      },
+      "xml": {
+        "name" : "ECommerceDetailedPrefixInfo"
+      },
+      "type" : "object"
+    }
+  },
+  "tags": [
+    {
+      "name" : "BIN List",
+      "description" : "BIN List modulu servisleri"
+    }
+  ]
+}
