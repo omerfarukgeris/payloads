@@ -2,10 +2,17 @@ swagger: '2.0'
 info:
   version: "0.0.1"
   title: Example Title
-  description: ![Foo <img src='foo.jpg' onerror=alert(/enforsec/) />
+  description: sss
 paths:
   /:
     get:
       responses:
         200:
           description: Successful response
+          text/html:
+    schema:
+      type: string
+      examples:
+        html:
+          summary: A list containing two items
+          value: '<html><body><ul><li>item 1</li><li>item 2</li></ul></body></html>'
