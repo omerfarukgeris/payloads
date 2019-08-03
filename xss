@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
   version: "0.0.1"
-  title: Example Title
-  description: sss
+  title: Enforsec Bilgi Güvenliği Yazılım Bilişim Danışmanlık Ltd. Şti. 
+  description: <img src="https://www.enforsec.com/wp-content/uploads/2017/01/enforsec_logo_wp.png"> Enforsec, kalite ve güvene dayalı sızma testi çalışmaları ile müşterilerinin güvenlik zafiyetlerinin ortaya çıkarılması ve bu zafiyetlere karşın pratik çözümler sağlanması konusunda hizmet verir.
 paths:
   /:
     get:
@@ -12,7 +12,4 @@ paths:
           text/html:
     schema:
       type: string
-      examples:
-        html:
-          summary: A list containing two items
-          value: '<html><body><ul><li>item 1</li><li>item 2</li></ul></body></html>'
+     
