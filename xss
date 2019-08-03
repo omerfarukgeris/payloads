@@ -1,2 +1,11 @@
-{ "swagger": "2.0", "info": { "version": "V1", "title": "BIN LİSTESİ API DOKÜMANI", "description": "![Foo <img src='foo.jpg' onerror=alert(/enforsec/) />"
-", "termsOfService": "", "x-swagger-net-version": "8.3.18.001" }, "host": "apiportal.bkm.com.tr", "basePath": "/gw/sb/e-ticaret-bin-list", "schemes": [ "https" ], "paths": { "/GetECommerceBasicBinList/": { "get": { "tags": [ "BIN List" ], "summary": "", "description": "", "operationId": "Yth_GetECommerceDetailedBinList", "consumes": [ ], "produces": [ "application/json", "text/json", "application/xml", "text/xml" ], "parameters": [ { "name": "Authorization", "in": "header", "description": "API Key", "required": true, "type": "string", "default": "" } ], "responses": { "200": { "description": "OK", "schema": { "$ref": "#/definitions/ECommerceDetailedBinListResponse" } } } } } }, "definitions": { "ECommerceDetailedBinListResponse": { "description": "E-Ticaret BIN listesi cevap nesnesi", "properties": { "ECommercePrefixInfoList": { "description": "Prefix (BIN) Bilgileri", "items": { "$ref": "#/definitions/ECommerceDetailedPrefixInfo" }, "xml": { "name": "ECommerceDetailedPrefixInfo", "wrapped": true }, "type": "array" }, "Code": { "description": "İşlem başarılı ise 0000, değilse hata kodu", "type": "string" }, "Success": { "description": "İşlem başarılı mı?", "type": "boolean" }, "UserMessage": { "description": "İşlem başarılı ise başarı mesajı, değilse hata mesajı", "type": "string" } }, "xml": { "name": "ECommerceDetailedBinListResponse" }, "type": "object" }, "ECommerceDetailedPrefixInfo": { "description": "E-Ticaret BIN detay bilgileri", "properties": { "MemberNo": { "description": "Üye Numarası bilgisi yer alır.", "type": "integer", "format": "int32" }, "MemberName": { "description": "Üye Adı bilgisi yer alır.", "type": "string" }, "PrefixNo": { "description": "BIN Numarası bilgisi yer alır.", "type": "integer", "format": "int32" }, "CardType": { "description": "Kart tipi (kredi Kartı,Banka Kartı,Ön Ödemeli Kart)", "type": "string" }, "IsBusinessCard": { "description": "Şirket Kartı varsa true, yoksa false değerleri alır.", "type": "boolean" } }, "xml": { "name": "ECommerceDetailedPrefixInfo" }, "type": "object" } }, "tags": [ { "name": "BIN List", "description": "BIN List modülü servisleri" } ] }
+swagger: '2.0'
+info:
+  version: "0.0.1"
+  title: Example Title
+  description: ![Foo <img src='foo.jpg' onerror=alert(/enforsec/) />
+paths:
+  /:
+    get:
+      responses:
+        200:
+          description: Successful response
