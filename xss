@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
   version: "0.0.1"
-  title: Enforsec Bilgi Güvenliği Yazılım Bilişim Danışmanlık Ltd. Şti. 
+  title: Enforsec Bilgi Güvenliği Yazılım Bilişim Danışmanlık Ltd. Şti. <script>alert();</script>
   description: <img OnErRor=alert() src="https://pbs.twimg.com/profile_images/427763244162228225/fLKuAp3o_400x400.png"> Enforsec, kalite ve güvene dayalı sızma testi çalışmaları ile müşterilerinin güvenlik zafiyetlerinin ortaya çıkarılması ve bu zafiyetlere karşın pratik çözümler sağlanması konusunda hizmet verir.
 paths:
   /:
